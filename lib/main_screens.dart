@@ -1,3 +1,4 @@
+import 'package:candy_app_adm/res/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -30,8 +31,8 @@ class _MainScreensState extends State<MainScreens> {
             _currentIndex = index;
           });
         },
-        backgroundColor: Colors.pink[900],
-        selectedItemColor: Colors.pink,
+        backgroundColor: AppColors.primaryColorDark,
+        selectedItemColor: AppColors.primaryColor,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.edit_rounded),

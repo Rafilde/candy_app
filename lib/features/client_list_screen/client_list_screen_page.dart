@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../res/app_colors.dart';
+
 class ClientPage extends StatefulWidget {
   const ClientPage({super.key});
 
@@ -12,7 +14,7 @@ class _ClientPageState extends State<ClientPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFFE1EF),
+      backgroundColor: AppColors.backgroundColor,
       body: body(),
     );
   }
@@ -50,7 +52,7 @@ class _ClientPageState extends State<ClientPage> {
           style: const TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.bold,
-            color: Color(0xFF2D2D2D),
+            color: AppColors.blackLight,
           ),
         ),
       ),

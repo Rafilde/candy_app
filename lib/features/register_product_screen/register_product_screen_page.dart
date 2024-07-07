@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:candy_app_adm/features/register_product_screen/register_product_view_model.dart';
+import 'package:candy_app_adm/res/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,7 +17,7 @@ class _RegisterProductPageState extends State<RegisterProductPage> {
     return ChangeNotifierProvider(
       create: (context) => RegisterProductViewModel(),
       child: Scaffold(
-        backgroundColor: Color(0xFFFFE1EF),
+        backgroundColor: AppColors.backgroundColor,
         body: body(),
       ),
     );
@@ -73,7 +74,7 @@ class _RegisterProductPageState extends State<RegisterProductPage> {
           style: const TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.bold,
-            color: Color(0xFF2D2D2D),
+            color: AppColors.blackLight,
           ),
         ),
       ),
@@ -84,11 +85,11 @@ class _RegisterProductPageState extends State<RegisterProductPage> {
       {double ContSize = 20}) {
     return CircleAvatar(
       radius: ContSize,
-      backgroundColor: Colors.teal,
+      backgroundColor: AppColors.secondaryColor,
       child: IconButton(
         onPressed: onPressed,
         icon: icon,
-        color: Color(0xFF002F24),
+        color: AppColors.secondaryColorDark,
       ),
     );
   }
@@ -136,8 +137,8 @@ class _RegisterProductPageState extends State<RegisterProductPage> {
           borderRadius: BorderRadius.circular(8.0),
         ),
         padding: EdgeInsets.all(15),
-        backgroundColor: Colors.pink,
-        foregroundColor: Colors.white,
+        backgroundColor: AppColors.primaryColor,
+        foregroundColor: AppColors.white,
         textStyle: TextStyle(
           fontSize: 15,
           fontWeight: FontWeight.bold,
@@ -152,15 +153,15 @@ class _RegisterProductPageState extends State<RegisterProductPage> {
   Widget _buildProductNameField(RegisterProductViewModel viewModel) {
     return TextFormField(
       controller: viewModel.nameController,
-      cursorColor: Colors.pink,
+      cursorColor: AppColors.primaryColor,
       decoration: InputDecoration(
         labelText: "Nome",
-        labelStyle: TextStyle(color: Color(0xFF2D2D2D)),
+        labelStyle: TextStyle(color: AppColors.blackLight),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xFF2D2D2D)),
+          borderSide: BorderSide(color: AppColors.blackLight),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xFF2D2D2D)),
+          borderSide: BorderSide(color: AppColors.blackLight),
         ),
         border: OutlineInputBorder(),
       ),
@@ -176,15 +177,15 @@ class _RegisterProductPageState extends State<RegisterProductPage> {
   Widget _buildQuantityField(RegisterProductViewModel viewModel) {
     return TextFormField(
       controller: viewModel.quantityController,
-      cursorColor: Colors.pink,
+      cursorColor: AppColors.primaryColor,
       decoration: InputDecoration(
         labelText: "Quantidade",
-        labelStyle: TextStyle(color: Color(0xFF2D2D2D)),
+        labelStyle: TextStyle(color: AppColors.blackLight),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xFF2D2D2D)),
+          borderSide: BorderSide(color: AppColors.blackLight),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xFF2D2D2D)),
+          borderSide: BorderSide(color: AppColors.blackLight),
         ),
         border: OutlineInputBorder(),
       ),
@@ -204,15 +205,15 @@ class _RegisterProductPageState extends State<RegisterProductPage> {
   Widget _buildPriceField(RegisterProductViewModel viewModel) {
     return TextFormField(
       controller: viewModel.priceController,
-      cursorColor: Colors.pink,
+      cursorColor: AppColors.primaryColor,
       decoration: InputDecoration(
         labelText: "Preço",
-        labelStyle: TextStyle(color: Color(0xFF2D2D2D)),
+        labelStyle: TextStyle(color: AppColors.blackLight),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xFF2D2D2D)),
+          borderSide: BorderSide(color: AppColors.blackLight),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xFF2D2D2D)),
+          borderSide: BorderSide(color: AppColors.blackLight),
         ),
         border: OutlineInputBorder(),
       ),
@@ -249,7 +250,7 @@ class _RegisterProductPageState extends State<RegisterProductPage> {
                 child: IconButton(
                     icon: const Icon(Icons.remove_circle),
                     onPressed: () => viewModel.removeImage(index),
-                    color: Colors.red),
+                    color: AppColors.red),
               ),
             ],
           );

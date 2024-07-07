@@ -1,3 +1,4 @@
+import 'package:candy_app_adm/res/app_colors.dart';
 import 'package:flutter/material.dart';
 import '../register_product_screen/register_product_screen_page.dart';
 
@@ -12,16 +13,16 @@ class _ProductPageState extends State<ProductPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFFE1EF),
+      backgroundColor: AppColors.backgroundColor,
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.teal,
+        backgroundColor: AppColors.secondaryColor,
         onPressed: () {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => RegisterProductPage()),
           );
         },
-        child: Icon(Icons.add, color: Color(0xFF002F24),),
+        child: Icon(Icons.add, color: AppColors.secondaryColorDark,),
       ),
       body: body(),
     );
@@ -60,7 +61,7 @@ class _ProductPageState extends State<ProductPage> {
           style: const TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.bold,
-            color: Color(0xFF2D2D2D),
+            color: AppColors.blackLight,
           ),
         ),
       ),
