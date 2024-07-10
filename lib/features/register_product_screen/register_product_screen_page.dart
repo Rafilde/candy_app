@@ -4,8 +4,12 @@ import 'package:candy_app_adm/res/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../app/app_route.dart';
+
 class RegisterProductPage extends StatefulWidget {
   const RegisterProductPage({Key? key}) : super(key: key);
+
+  static const route = '/register_product_screen';
 
   @override
   State<RegisterProductPage> createState() => _RegisterProductPageState();
@@ -58,7 +62,7 @@ class _RegisterProductPageState extends State<RegisterProductPage> {
           size: 30,
         ),
         () {
-          Navigator.pop(context);
+          AppRouter.navigateBack(context);
         },
         ContSize: 25,
       ),

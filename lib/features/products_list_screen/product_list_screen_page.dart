@@ -1,15 +1,20 @@
+import 'package:candy_app_adm/features/products_list_screen/product_list_view_model.dart';
 import 'package:candy_app_adm/res/app_colors.dart';
 import 'package:flutter/material.dart';
-import '../register_product_screen/register_product_screen_page.dart';
+import 'package:provider/provider.dart';
 
 class ProductPage extends StatefulWidget {
   const ProductPage({Key? key}) : super(key: key);
+
+  static const route = '/products_list_screen';
 
   @override
   State<ProductPage> createState() => _ProductPageState();
 }
 
 class _ProductPageState extends State<ProductPage> {
+  final ProductListViewModel viewModel = ProductListViewModel();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,10 +22,7 @@ class _ProductPageState extends State<ProductPage> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: AppColors.secondaryColor,
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => RegisterProductPage()),
-          );
+          viewModel.navigateToRegisterProduct(context);
         },
         child: Icon(Icons.add, color: AppColors.secondaryColorDark,),
       ),

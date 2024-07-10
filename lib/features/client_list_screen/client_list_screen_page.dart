@@ -6,6 +6,8 @@ import '../../res/app_colors.dart';
 class ClientPage extends StatefulWidget {
   const ClientPage({super.key});
 
+  static const route = '/client_list_screen';
+
   @override
   State<ClientPage> createState() => _ClientPageState();
 }

@@ -2,8 +2,8 @@ import 'package:candy_app_adm/res/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'features/client_list_screen/client_list_screen_page.dart';
-import 'features/products_list_screen/product_list_screen_page.dart';
+import '../features/client_list_screen/client_list_screen_page.dart';
+import '../features/products_list_screen/product_list_screen_page.dart';
 
 class MainScreens extends StatefulWidget {
   const MainScreens({super.key});
